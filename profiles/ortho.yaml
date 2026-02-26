@@ -1,0 +1,75 @@
+id: ortho
+name: "Orthopedics"
+description: "Specialized format for orthopedic consultations"
+version: "1.1.0"
+author: "DuraEdgeAI"
+specialty: "orthopedics"
+tags:
+  - orthopedics
+  - surgery
+
+sections:
+  - id: 1
+    title: "Diagnosis"
+    color: "color-orange"
+    placeholder: "##DIAGNOSIS##"
+    content_extraction_instructions: >
+      Diagnoses in bullet points, with reference to side and the date of the
+      diagnosis (Format: Condition Limb/Organ Side). Never put diagnosis not
+      specifically mentioned.
+    format: bullets
+  - id: 2
+    title: "History"
+    color: "color-purple"
+    placeholder: "##HISTORY##"
+    content_extraction_instructions: >
+      Clinical history, course, or background information.
+    format: prose
+  - id: 3
+    title: "Clinical Exam"
+    color: "color-green"
+    placeholder: "##CLINICAL_EXAM##"
+    content_extraction_instructions: >
+      Physical examination findings, tests performed (do not include dialogs).
+    format: prose
+  - id: 4
+    title: "Radiology"
+    color: "color-cyan"
+    placeholder: "##RADIOLOGY##"
+    content_extraction_instructions: >
+      References to radiological or diagnostic imaging already done. Not future
+      radiology to be performed.
+    format: prose
+  - id: 5
+    title: "Treatment Plan"
+    color: "color-pink"
+    placeholder: "##TREATMENT_PLAN##"
+    content_extraction_instructions: >
+      Explain without summarizing, what is discussed with the patient as the
+      explanation of his problem. Then explain always in prose, the therapeutic
+      plan and the next steps in prose (even if multiple items). If multiple
+      items separate with a blank line.
+    format: prose
+  - id: 6
+    title: "Inconsistencies"
+    color: "color-red"
+    placeholder: "##INCONSISTENCIES##"
+    content_extraction_instructions: >
+      Flag any inconsistencies found in the dictation.
+    format: bullets_if_multiple
+  - id: 7
+    title: "To-Dos"
+    color: "color-yellow"
+    placeholder: "##TODOS##"
+    content_extraction_instructions: >
+      Complete list of action items for the doctor.
+    format: bullets_if_multiple
+
+prompts:
+  writing_style: >
+    Do NOT use second-person language (e.g. "you", "your", "we"). Write
+    exclusively in third person, referring to the patient as "the patient".
+    Use an objective, clinical, professional tone suitable for medical
+    documentation. Do not address the patient directly. Avoid conversational
+    or instructional phrasing directed at the patient. NEVER ASSUME MEDICAL
+    INFORMATION OR PLAN NOT SPECIFICALLY MENTIONED.

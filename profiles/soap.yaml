@@ -1,0 +1,44 @@
+id: soap
+name: "General (SOAP)"
+description: "Standard SOAP format for general medicine and primary care"
+version: "1.1.0"
+author: "DuraEdgeAI"
+specialty: "general-medicine"
+tags:
+  - general-medicine
+  - primary-care
+
+sections:
+  - id: 1
+    title: "Subjective"
+    color: "color-blue"
+    placeholder: "##SUBJECTIVE##"
+    content_extraction_instructions: >
+      Chief complaint, history of present illness, patient-reported symptoms,
+      relevant medical/surgical/family/social history.
+    format: prose
+  - id: 2
+    title: "Objective"
+    color: "color-green"
+    placeholder: "##OBJECTIVE##"
+    content_extraction_instructions: >
+      Physical examination findings, vital signs, laboratory results,
+      imaging findings, observable/measurable data.
+    format: prose
+  - id: 3
+    title: "Assessment"
+    color: "color-orange"
+    placeholder: "##ASSESSMENT##"
+    content_extraction_instructions: >
+      Diagnosis or differential diagnoses, clinical impression, problem list.
+    format: bullets_if_multiple
+  - id: 4
+    title: "Plan"
+    color: "color-pink"
+    placeholder: "##PLAN##"
+    content_extraction_instructions: >
+      Treatment plan, medications, procedures, referrals, follow-up instructions,
+      patient education.
+    format: bullets_if_multiple
+
+prompts: {}
