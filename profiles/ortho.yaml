@@ -11,6 +11,10 @@ tags:
 sections:
   - id: 1
     title: "Diagnosis"
+    title-translations:
+      de: "Diagnose"
+      fr: "Diagnostic"
+      it: "Diagnosi"
     color: "color-orange"
     placeholder: "##DIAGNOSIS##"
     content_extraction_instructions: >
@@ -20,6 +24,10 @@ sections:
     format: bullets
   - id: 2
     title: "History"
+    title-translations:
+      de: "Anamnese"
+      fr: "Anamnèse"
+      it: "Anamnesi"
     color: "color-purple"
     placeholder: "##HISTORY##"
     content_extraction_instructions: >
@@ -27,6 +35,10 @@ sections:
     format: prose
   - id: 3
     title: "Clinical Exam"
+    title-translations:
+      de: "Klinische Untersuchung"
+      fr: "Examen clinique"
+      it: "Esame clinico"
     color: "color-green"
     placeholder: "##CLINICAL_EXAM##"
     content_extraction_instructions: >
@@ -34,6 +46,10 @@ sections:
     format: prose
   - id: 4
     title: "Radiology"
+    title-translations:
+      de: "Radiologie"
+      fr: "Radiologie"
+      it: "Radiologia"
     color: "color-cyan"
     placeholder: "##RADIOLOGY##"
     content_extraction_instructions: >
@@ -42,6 +58,10 @@ sections:
     format: prose
   - id: 5
     title: "Treatment Plan"
+    title-translations:
+      de: "Behandlungsplan"
+      fr: "Plan de traitement"
+      it: "Piano terapeutico"
     color: "color-pink"
     placeholder: "##TREATMENT_PLAN##"
     content_extraction_instructions: >
@@ -52,6 +72,10 @@ sections:
     format: prose
   - id: 6
     title: "Inconsistencies"
+    title-translations:
+      de: "Inkonsistenzen"
+      fr: "Incohérences"
+      it: "Incongruenze"
     color: "color-red"
     placeholder: "##INCONSISTENCIES##"
     content_extraction_instructions: >
@@ -59,6 +83,10 @@ sections:
     format: bullets_if_multiple
   - id: 7
     title: "To-Dos"
+    title-translations:
+      de: "Aufgaben"
+      fr: "Tâches"
+      it: "Attività"
     color: "color-yellow"
     placeholder: "##TODOS##"
     content_extraction_instructions: >

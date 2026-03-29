@@ -11,6 +11,10 @@ tags:
 sections:
   - id: 1
     title: "Subjective"
+    title-translations:
+      de: "Subjektiv"
+      fr: "Subjectif"
+      it: "Soggettivo"
     color: "color-blue"
     placeholder: "##SUBJECTIVE##"
     content_extraction_instructions: >
@@ -19,6 +23,10 @@ sections:
     format: prose
   - id: 2
     title: "Objective"
+    title-translations:
+      de: "Objektiv"
+      fr: "Objectif"
+      it: "Oggettivo"
     color: "color-green"
     placeholder: "##OBJECTIVE##"
     content_extraction_instructions: >
@@ -27,6 +35,10 @@ sections:
     format: prose
   - id: 3
     title: "Assessment"
+    title-translations:
+      de: "Beurteilung"
+      fr: "\u00C9valuation"
+      it: "Valutazione"
     color: "color-orange"
     placeholder: "##ASSESSMENT##"
     content_extraction_instructions: >
@@ -34,6 +46,10 @@ sections:
     format: bullets_if_multiple
   - id: 4
     title: "Plan"
+    title-translations:
+      de: "Plan"
+      fr: "Plan"
+      it: "Piano"
     color: "color-pink"
     placeholder: "##PLAN##"
     content_extraction_instructions: >
