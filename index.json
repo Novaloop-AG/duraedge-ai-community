@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "profiles": [
-    { "id": "soap", "path": "profiles/soap.yaml", "version": "1.1.0" },
-    { "id": "ortho", "path": "profiles/ortho.yaml", "version": "1.1.0" }
+    { "id": "soap", "path": "profiles/soap.yaml", "version": "1.2.0" },
+    { "id": "ortho", "path": "profiles/ortho.yaml", "version": "1.2.0" }
   ]
 }

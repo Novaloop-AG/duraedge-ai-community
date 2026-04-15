@@ -1,7 +1,7 @@
 id: soap
 name: "General (SOAP)"
 description: "Standard SOAP format for general medicine and primary care"
-version: "1.1.0"
+version: "1.2.0"
 author: "DuraEdgeAI"
 specialty: "general-medicine"
 tags:
@@ -57,4 +57,10 @@ sections:
       patient education.
     format: bullets_if_multiple
 
-prompts: {}
+prompts:
+  writing_style: >
+    Do NOT use second-person language (e.g. "you", "your", "we"). Write
+    exclusively in third person, referring to the patient as "the patient".
+    Use an objective, clinical, professional tone suitable for medical
+    documentation. Do not address the patient directly. Avoid conversational
+    or instructional phrasing directed at the patient.

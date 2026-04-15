@@ -1,7 +1,7 @@
 id: ortho
 name: "Orthopedics"
 description: "Specialized format for orthopedic consultations"
-version: "1.1.0"
+version: "1.2.0"
 author: "DuraEdgeAI"
 specialty: "orthopedics"
 tags:
@@ -19,8 +19,7 @@ sections:
     placeholder: "##DIAGNOSIS##"
     content_extraction_instructions: >
       Diagnoses in bullet points, with reference to side and the date of the
-      diagnosis (Format: Condition Limb/Organ Side). Never put diagnosis not
-      specifically mentioned.
+      diagnosis (Format: Condition Limb/Organ Side).
     format: bullets
   - id: 2
     title: "History"
@@ -99,5 +98,4 @@ prompts:
     exclusively in third person, referring to the patient as "the patient".
     Use an objective, clinical, professional tone suitable for medical
     documentation. Do not address the patient directly. Avoid conversational
-    or instructional phrasing directed at the patient. NEVER ASSUME MEDICAL
-    INFORMATION OR PLAN NOT SPECIFICALLY MENTIONED.
+    or instructional phrasing directed at the patient.
