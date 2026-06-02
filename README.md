@@ -16,6 +16,7 @@ Only new or updated profiles are downloaded. Your locally cached profiles are ne
 |---------|-----------|----------|-------------|
 | `soap` | General Medicine | 4 | Standard SOAP format (Subjective, Objective, Assessment, Plan) |
 | `ortho` | Orthopedics | 7 | Diagnosis, History, Clinical Exam, Radiology, Treatment Plan, Inconsistencies, To-Dos |
+| `cardiology` | Cardiology | 3 | Diagnoses (per-diagnosis short findings + cvRF sub-list), chronological Examination Findings, consolidated Medications |
 
 ## Contributing a Profile
 

@@ -1,0 +1,72 @@
+id: cardiology
+name: "Cardiology"
+description: "Cardiology consultation format — diagnoses first with per-diagnosis short findings and risk factors, chronological examination findings, and a consolidated medication list"
+version: "1.0.0"
+author: "DuraEdgeAI"
+specialty: "cardiology"
+tags:
+  - cardiology
+  - internal-medicine
+
+sections:
+  - id: 1
+    title: "Diagnoses"
+    title-translations:
+      de: "Diagnosen"
+      fr: "Diagnostics"
+      it: "Diagnosi"
+    color: "color-orange"
+    placeholder: "##DIAGNOSES##"
+    content_extraction_instructions: >
+      List the cardiological diagnoses first and most prominently, ordered by
+      clinical relevance (primary cardiac diagnosis at the top). Number each
+      diagnosis. Directly under each diagnosis, add a brief findings summary
+      (one to two sentences, prefixed with a short-findings label such as
+      "Kurzbefund:") capturing the most important examination findings that
+      support or characterise that diagnosis. Include cardiovascular risk
+      factors as a dedicated entry (label it "cvRF"), listing each individual
+      factor as an indented sub-point (e.g. arterial hypertension, dyslipidaemia,
+      diabetes mellitus, nicotine use, positive family history, obesity). Only
+      include diagnoses and risk factors actually documented in the source — do
+      not infer.
+    format: numbered
+  - id: 2
+    title: "Examination Findings"
+    title-translations:
+      de: "Untersuchungsbefunde"
+      fr: "Résultats d'examen"
+      it: "Reperti degli esami"
+    color: "color-green"
+    placeholder: "##EXAM_FINDINGS##"
+    content_extraction_instructions: >
+      All examination findings (e.g. ECG, echocardiography, stress
+      echocardiography, laboratory values, vital signs, imaging), ordered
+      strictly chronologically from oldest to newest. Prefix each finding with
+      its date when available. This is the chronological record — do not group
+      findings by diagnosis here. Summarise each finding concisely, keeping the
+      key measured values.
+    format: bullets
+  - id: 3
+    title: "Medications"
+    title-translations:
+      de: "Medikation"
+      fr: "Médication"
+      it: "Terapia farmacologica"
+    color: "color-pink"
+    placeholder: "##MEDICATIONS##"
+    content_extraction_instructions: >
+      A separate, consolidated list of all current medications. Take the
+      medication list from the most recent report or document that mentions
+      medications — the newest medication status supersedes older ones. List
+      each medication on its own line with dose and frequency when stated. Do
+      not carry over discontinued medications from older reports unless they are
+      still listed in the most recent one.
+    format: bullets
+
+prompts:
+  writing_style: >
+    Do NOT use second-person language (e.g. "you", "your", "we"). Write
+    exclusively in third person, referring to the patient as "the patient".
+    Use an objective, clinical, professional tone suitable for medical
+    documentation. Do not address the patient directly. Avoid conversational
+    or instructional phrasing directed at the patient.
