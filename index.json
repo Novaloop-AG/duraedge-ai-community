@@ -3,6 +3,8 @@
   "profiles": [
     { "id": "soap", "path": "profiles/soap.yaml", "version": "1.2.0" },
     { "id": "ortho", "path": "profiles/ortho.yaml", "version": "1.2.0" },
-    { "id": "cardiology", "path": "profiles/cardiology.yaml", "version": "1.0.0" }
+    { "id": "cardiology", "path": "profiles/cardiology.yaml", "version": "1.0.0" },
+    { "id": "hand-surgery", "path": "profiles/hand_surgery.yaml", "version": "1.0.0" },
+    { "id": "plastic-surgery", "path": "profiles/plastic_surgery.yaml", "version": "1.0.0" }
   ]
 }

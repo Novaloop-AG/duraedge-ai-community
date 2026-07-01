@@ -1,0 +1,115 @@
+id: plastic-surgery
+name: "Plastic Surgery"
+description: "Plastic and reconstructive surgery consultation format — diagnosis/indication, history, examination, photodocumentation, procedure plan (flap/technique) and follow-up"
+version: "1.0.0"
+author: "DuraEdgeAI"
+specialty: "plastic surgery"
+tags:
+  - plastic-surgery
+  - reconstructive-surgery
+  - surgery
+
+sections:
+  - id: 1
+    title: "Diagnosis / Indication"
+    title-translations:
+      de: "Diagnose / Indikation"
+      fr: "Diagnostic / Indication"
+      it: "Diagnosi / Indicazione"
+    color: "color-orange"
+    placeholder: "##DIAGNOSIS##"
+    content_extraction_instructions: >
+      State the diagnosis or the indication for the procedure in bullet points,
+      with laterality and anatomical site where relevant. Distinguish clearly
+      between reconstructive indications (defect, trauma, tumour, congenital) and
+      aesthetic indications. Include the affected side and location.
+    format: bullets
+  - id: 2
+    title: "History"
+    title-translations:
+      de: "Anamnese"
+      fr: "Anamnèse"
+      it: "Anamnesi"
+    color: "color-purple"
+    placeholder: "##HISTORY##"
+    content_extraction_instructions: >
+      Clinical history and course: onset, prior treatments and operations at the
+      site, oncological or trauma history where applicable, and factors affecting
+      wound healing and flap viability (smoking, diabetes, prior radiotherapy,
+      anticoagulation, BMI). Record the patient's goals and expectations.
+    format: prose
+  - id: 3
+    title: "Clinical Examination"
+    title-translations:
+      de: "Klinische Untersuchung"
+      fr: "Examen clinique"
+      it: "Esame clinico"
+    color: "color-green"
+    placeholder: "##CLINICAL_EXAM##"
+    content_extraction_instructions: >
+      Examination findings: defect size and depth, tissue quality, scars, skin
+      laxity and perfusion. For flap planning note recipient and potential donor
+      sites and, where documented, perforator or vascular assessment. Do not
+      include dialogue.
+    format: prose
+  - id: 4
+    title: "Photodocumentation & Imaging"
+    title-translations:
+      de: "Fotodokumentation & Bildgebung"
+      fr: "Photodocumentation et imagerie"
+      it: "Fotodocumentazione e imaging"
+    color: "color-cyan"
+    placeholder: "##PHOTO_IMAGING##"
+    content_extraction_instructions: >
+      References to clinical photographs taken and to imaging already performed
+      (ultrasound, CT angiography, MRI) relevant to planning, together with their
+      findings. Not documentation still to be obtained.
+    format: prose
+  - id: 5
+    title: "Procedure Plan"
+    title-translations:
+      de: "Eingriffsplanung"
+      fr: "Plan opératoire"
+      it: "Piano dell'intervento"
+    color: "color-blue"
+    placeholder: "##PROCEDURE_PLAN##"
+    content_extraction_instructions: >
+      The planned operative procedure described in prose: technique or named flap,
+      donor and recipient sites, closure method (primary, graft, local/regional/
+      free flap), laterality, anaesthesia and expected timing. State planned
+      procedures only — not findings.
+    format: prose
+  - id: 6
+    title: "Treatment Plan & Follow-up"
+    title-translations:
+      de: "Behandlungsplan & Nachsorge"
+      fr: "Plan de traitement et suivi"
+      it: "Piano terapeutico e follow-up"
+    color: "color-pink"
+    placeholder: "##TREATMENT_PLAN##"
+    content_extraction_instructions: >
+      Explain, without summarizing, what was discussed with the patient as the
+      explanation of the problem. Then describe in prose the non-operative
+      treatment, perioperative measures, aftercare and follow-up plan. If
+      multiple items, separate them with a blank line.
+    format: prose
+  - id: 7
+    title: "To-Dos"
+    title-translations:
+      de: "Aufgaben"
+      fr: "Tâches"
+      it: "Attività"
+    color: "color-yellow"
+    placeholder: "##TODOS##"
+    content_extraction_instructions: >
+      Complete list of action items for the doctor (referrals, imaging or
+      photographs to obtain, scheduling of surgery, consent, follow-up).
+    format: bullets_if_multiple
+
+prompts:
+  writing_style: >
+    Do NOT use second-person language (e.g. "you", "your", "we"). Write
+    exclusively in third person, referring to the patient as "the patient".
+    Use an objective, clinical, professional tone suitable for medical
+    documentation. Do not address the patient directly. Avoid conversational
+    or instructional phrasing directed at the patient.

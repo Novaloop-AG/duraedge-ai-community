@@ -1,0 +1,103 @@
+id: hand-surgery
+name: "Hand Surgery"
+description: "Hand surgery consultation format — diagnosis with laterality and digit, focused history, neurovascular and named provocative examination, imaging, and treatment plan"
+version: "1.0.0"
+author: "DuraEdgeAI"
+specialty: "hand surgery"
+tags:
+  - hand-surgery
+  - orthopedics
+  - surgery
+
+sections:
+  - id: 1
+    title: "Diagnosis"
+    title-translations:
+      de: "Diagnose"
+      fr: "Diagnostic"
+      it: "Diagnosi"
+    color: "color-orange"
+    placeholder: "##DIAGNOSIS##"
+    content_extraction_instructions: >
+      Diagnoses in bullet points. For each, state the affected side (left/right),
+      the digit or ray (e.g. thumb, index, D1–D5) and the anatomical structure
+      (tendon, nerve, joint, bone). Include the date of the diagnosis or injury
+      when documented (Format: Condition — Digit/Structure — Side).
+    format: bullets
+  - id: 2
+    title: "History"
+    title-translations:
+      de: "Anamnese"
+      fr: "Anamnèse"
+      it: "Anamnesi"
+    color: "color-purple"
+    placeholder: "##HISTORY##"
+    content_extraction_instructions: >
+      Clinical history and course: mechanism and time of injury, hand dominance,
+      occupation and manual demands, prior hand surgery or injections, and
+      relevant comorbidities (diabetes, rheumatoid disease, smoking) that affect
+      healing.
+    format: prose
+  - id: 3
+    title: "Clinical Examination"
+    title-translations:
+      de: "Klinische Untersuchung"
+      fr: "Examen clinique"
+      it: "Esame clinico"
+    color: "color-green"
+    placeholder: "##CLINICAL_EXAM##"
+    content_extraction_instructions: >
+      Inspection, range of motion and grip/pinch strength. Document the
+      neurovascular status explicitly (capillary refill, Allen test, two-point
+      discrimination, motor and sensory function of median/ulnar/radial nerves).
+      Record named provocative tests when performed and their result (e.g. Tinel,
+      Phalen, Durkan, Finkelstein, Froment, Watson). Do not include dialogue.
+    format: prose
+  - id: 4
+    title: "Imaging"
+    title-translations:
+      de: "Bildgebung"
+      fr: "Imagerie"
+      it: "Imaging"
+    color: "color-cyan"
+    placeholder: "##IMAGING##"
+    content_extraction_instructions: >
+      References to radiological or diagnostic imaging already performed
+      (radiographs, ultrasound, CT, MRI, nerve conduction studies) and their
+      findings. Not imaging still to be ordered.
+    format: prose
+  - id: 5
+    title: "Treatment Plan"
+    title-translations:
+      de: "Behandlungsplan"
+      fr: "Plan de traitement"
+      it: "Piano terapeutico"
+    color: "color-pink"
+    placeholder: "##TREATMENT_PLAN##"
+    content_extraction_instructions: >
+      Explain, without summarizing, what was discussed with the patient as the
+      explanation of the problem. Then describe in prose the therapeutic plan and
+      next steps — conservative measures (splinting, therapy, injection) or the
+      planned operative procedure, laterality and timing. If multiple items,
+      separate them with a blank line.
+    format: prose
+  - id: 6
+    title: "To-Dos"
+    title-translations:
+      de: "Aufgaben"
+      fr: "Tâches"
+      it: "Attività"
+    color: "color-yellow"
+    placeholder: "##TODOS##"
+    content_extraction_instructions: >
+      Complete list of action items for the doctor (referrals, therapy
+      prescription, imaging to order, scheduling of surgery, follow-up).
+    format: bullets_if_multiple
+
+prompts:
+  writing_style: >
+    Do NOT use second-person language (e.g. "you", "your", "we"). Write
+    exclusively in third person, referring to the patient as "the patient".
+    Use an objective, clinical, professional tone suitable for medical
+    documentation. Do not address the patient directly. Avoid conversational
+    or instructional phrasing directed at the patient.
