@@ -1,7 +1,7 @@
 id: cardiology
 name: "Cardiology"
 description: "Cardiology consultation format — diagnoses first with per-diagnosis short findings and risk factors, chronological examination findings, and a consolidated medication list"
-version: "1.0.0"
+version: "1.1.0"
 author: "DuraEdgeAI"
 specialty: "cardiology"
 tags:
@@ -18,17 +18,17 @@ sections:
     color: "color-orange"
     placeholder: "##DIAGNOSES##"
     content_extraction_instructions: >
-      List the cardiological diagnoses first and most prominently, ordered by
-      clinical relevance (primary cardiac diagnosis at the top). Number each
-      diagnosis. Directly under each diagnosis, add a brief findings summary
-      (one to two sentences, prefixed with a short-findings label such as
-      "Kurzbefund:") capturing the most important examination findings that
-      support or characterise that diagnosis. Include cardiovascular risk
-      factors as a dedicated entry (label it "cvRF"), listing each individual
-      factor as an indented sub-point (e.g. arterial hypertension, dyslipidaemia,
-      diabetes mellitus, nicotine use, positive family history, obesity). Only
-      include diagnoses and risk factors actually documented in the source — do
-      not infer.
+      List the cardiological diagnoses first, in the order in which the
+      physician states them; the diagnosis the physician names as the main
+      one comes first. Number each diagnosis. Directly under each diagnosis,
+      add a brief findings summary (one to two sentences, prefixed with a
+      short-findings label such as "Kurzbefund:") restating the examination
+      findings the physician mentions in connection with that diagnosis.
+      Include cardiovascular risk factors as a dedicated entry (label it
+      "cvRF"), listing each individual factor as an indented sub-point (e.g.
+      arterial hypertension, dyslipidaemia, diabetes mellitus, nicotine use,
+      positive family history, obesity). Only include diagnoses and risk
+      factors actually documented in the source — do not infer.
     format: numbered
   - id: 2
     title: "Examination Findings"
